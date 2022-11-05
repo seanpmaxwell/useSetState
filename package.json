@@ -1,5 +1,5 @@
 {
-  "name": "usesetstate",
+  "name": "@seanpmaxwell1/usesetstate",
   "version": "1.0.0",
   "description": "Manage state for a react component in a single object",
   "main": "./dist/index.js",

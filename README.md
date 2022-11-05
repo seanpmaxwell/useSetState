@@ -8,14 +8,14 @@ having to use multiple `useState` hooks.
 
 #### Installation
 
-- `npm i -s useSetState`
+- `npm i -s @seanpmaxwell1/usesetstate`
 
 
 #### Sample code:
 
 ```typescript
 import { useContext } from 'react';
-import useSetState, { TSetState } from 'usesetstate';
+import useSetState, { TSetState } from '@seanpmaxwell1/usesetstate';
 
 
 const LoginPageCxt = React.createContext<ILoginPageCxt>({
