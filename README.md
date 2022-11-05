@@ -1,4 +1,4 @@
-# About useSetState
+# About useSetState-ts
 
 Custom react hook which allows you to use a single object as the state instead of 
 having to use multiple `useState` hooks.
@@ -8,14 +8,14 @@ having to use multiple `useState` hooks.
 
 #### Installation
 
-- `npm i -s @seanpmaxwell1/usesetstate`
+- `npm i -s usesetstate-ts`
 
 
 #### Sample code:
 
 ```typescript
 import { useContext } from 'react';
-import useSetState, { TSetState } from '@seanpmaxwell1/usesetstate';
+import useSetState, { TSetState } from 'usesetstate-ts';
 
 
 const LoginPageCxt = React.createContext<ILoginPageCxt>({
