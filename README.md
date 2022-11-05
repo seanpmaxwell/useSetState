@@ -3,7 +3,7 @@
 Custom react hook which allows you to use a single object as the state instead of 
 having to use multiple `useState` hooks.
 
-- This was written in Typescript and full typesafe :)
+- This was written in Typescript and is fully typesafe :)
 
 
 #### Installation
