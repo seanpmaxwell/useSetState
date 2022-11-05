@@ -1,0 +1,46 @@
+{
+  "name": "usesetstate",
+  "version": "1.0.0",
+  "description": "Insert dynamic data into url path params",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "directories": {
+    "dist": "dist"
+  },
+  "scripts": {
+    "build": "rimraf dist && rollup -c rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanpmaxwell/useSetState.git"
+  },
+  "keywords": [
+    "insert",
+    "url",
+    "param",
+    "params",
+    "dynamic",
+    "setup",
+    "node",
+    "client",
+    "browser"
+  ],
+  "author": "sean maxwell",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/seanpmaxwell/useSetState/issues"
+  },
+  "homepage": "https://github.com/seanpmaxwell/useSetState#readme",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^9.0.1",
+    "@types/react": "^18.0.25",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.79.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "tslib": "^2.4.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "react": "^18.2.0"
+  }
+}
