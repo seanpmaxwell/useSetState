@@ -9,23 +9,23 @@ export type TSetState<T> = (newPartialState: Partial<T>) => void;
 // **** Functions **** //
 
 /**
- * Do setState like react class component.
+ * Do setState like react class component, // [state, setCustomState, resetState]
  */
-function useSetState<T extends object>(initialState: T): [T, TSetState<T>] {
-  const [state, setState] = useState<T>(initialState);
-  // Function which accepts a partial state to merge
+export function useSetState<T extends {}>(
+  initState: T,
+): [T, (arg: Partial<T>) => void, (arg?: Partial<T>) => void] {
+  const [ state, setState ] = useState<T>(initState);
+  // "setState" function
   const setCustomState = useCallback((newPartialState: Partial<T>) => {
-    try {
-      setState((prevState): T => {
-        return { ...prevState, ...newPartialState };
-      });
-    } catch (error) {
-      // eslint-disable-next-line no-console
-      console.error(error);
-    }
+    return setState(prevState => ({ ...prevState, ...newPartialState }));
+  }, []);
+  // "resetState" function
+  const resetState = useCallback((partialState: Partial<T> = {}) => {
+    return setState(() => ({ ...initState, ...partialState }));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // Return
-  return [state, setCustomState];
+  return [state, setCustomState, resetState];
 };
 
 
